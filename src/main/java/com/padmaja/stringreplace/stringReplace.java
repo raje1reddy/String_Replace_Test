@@ -1,24 +1,44 @@
-package com.padmaja.stringreverse;
+package com.padmaja.stringreplace;
 import java.lang.String;
 
+// Java program for Replace every character of a
+// string by a different character
 public class stringReplace {
-    public String replace(String inputString, String outputString) {
-        //convert string to array
-        char[] myarray= inputString.toCharArray();
-        for(int i=0,j = inputString.length()-1; i<j; i++,j--){
-            char temp = myarray[i];
-            myarray[i]= myarray[j];
-            myarray[j]= temp;
-        }
-        //convert array to string and assign the string to return it
 
-        //String reveseString =  myarray.toString();
-        //return new String(myarray);
-        //return  myarray.toString();
-       String reveseString = new String(myarray);
-       return reveseString;
+    //Function to manipulate the string
+    static void manipulateString(String str)
+    {
+
+        char[] str1 = str.toCharArray();
+
+        // looping through each character of string
+        for (int i = 0; i < str.length(); i++) {
+
+            // storing integer ASCII value of
+            // the character in 'asc'
+
+            int asc = str1[i];
+
+            // 'rem' contains coded value which
+            // needs to be rounded to 26
+            int rem = asc - (26 - (str1[i] - 97));
+
+            // coverting 'rem' character in range
+            // 0-25 and storing in 'm'
+            int m = rem % 26;
+
+            // printing character by adding ascii value of 'a'
+            // so that it becomes in the desired range i.e. a-z
+            str1[i] = (char)(m + 'a');
+
+        }
+
+        String str2 = String.valueOf(str1);
+        System.out.println(str2);
 
     }
 
-
 }
+
+
+
