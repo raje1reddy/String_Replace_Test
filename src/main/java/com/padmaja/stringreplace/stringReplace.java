@@ -1,8 +1,8 @@
 package com.padmaja.stringreverse;
 import java.lang.String;
 
-public class stringUtil {
-    public String reverse(String inputString) {
+public class stringReplace {
+    public String replace(String inputString, String outputString) {
         //convert string to array
         char[] myarray= inputString.toCharArray();
         for(int i=0,j = inputString.length()-1; i<j; i++,j--){
