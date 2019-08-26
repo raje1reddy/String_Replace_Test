@@ -3,14 +3,23 @@ package com.padmaja.stringreplace;
 import org.junit.Test;
 import java.lang.String;
 
-import static com.padmaja.stringreplace.stringReplace.manipulateString;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
- class stringReplaceTest {
+//import static com.padmaja.stringreplace.stringReplace.manipulateString;
+//import static org.junit.Assert.*;
 
-    @Test
-    public static  void main(String[] args) {
-        //stringReplace util = new stringReplace();
-        manipulateString("HelloWorld");
-    }
-}
+ public class stringReplaceTest {
+
+     @Test
+     public void replaceTest1() {
+         stringReplace util = new stringReplace();
+         //manipulateString("HelloWorld");
+         String result = util.manipulateString("HelloWorld");
+         System.out.println(result);
+         String expectedresult = "vbppvzvbpz";
+         assertEquals(expectedresult,result);
+     }
+ }
+
+
+

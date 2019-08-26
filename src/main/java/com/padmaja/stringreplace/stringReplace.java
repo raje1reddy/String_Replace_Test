@@ -6,7 +6,7 @@ import java.lang.String;
 public class stringReplace {
 
     //Function to manipulate the string
-    static void manipulateString(String str)
+    public String manipulateString(String str)
     {
 
         char[] str1 = str.toCharArray();
@@ -34,7 +34,9 @@ public class stringReplace {
         }
 
         String str2 = String.valueOf(str1);
-        System.out.println(str2);
+
+        //System.out.println(str2);
+        return str2;
 
     }
 
